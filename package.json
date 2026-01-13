@@ -1,0 +1,35 @@
+{
+  "name": "riddler-permit2-erc3009",
+  "version": "2.0.0",
+  "description": "CLI client for Riddler Commerce API - ERC-3009, Permit2, and Deposit Address flows",
+  "main": "src/index.js",
+  "bin": {
+    "riddler-client": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "quote": "node src/index.js quote",
+    "full": "node src/index.js full",
+    "status": "node src/index.js status",
+    "balance": "node src/index.js balance",
+    "approve-permit2": "node src/index.js approve-permit2",
+    "hd-wallet": "node src/index.js hd-wallet",
+    "help": "node src/index.js help"
+  },
+  "keywords": [
+    "erc3009",
+    "permit2",
+    "gasless",
+    "usdc",
+    "usdt",
+    "bridge",
+    "cross-chain",
+    "commerce"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2"
+  }
+}
