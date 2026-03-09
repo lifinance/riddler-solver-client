@@ -10,11 +10,11 @@ const CONFIG = {
       apiKey: process.env.RIDDLER_API_KEY_LOCAL || process.env.RIDDLER_API_KEY || ''
     },
     dev: {
-      url: process.env.RIDDLER_URL_DEV || 'https://riddler-dev.li.quest/commerce',
+      url: process.env.RIDDLER_URL_DEV || 'https://solver-testnet.li.quest/commerce',
       apiKey: process.env.RIDDLER_API_KEY_DEV || process.env.RIDDLER_API_KEY || ''
     },
     prod: {
-      url: process.env.RIDDLER_URL_PROD || 'https://riddler-prod.li.quest/commerce',
+      url: process.env.RIDDLER_URL_PROD || 'https://solver.li.quest/commerce',
       apiKey: process.env.RIDDLER_API_KEY_PROD || process.env.RIDDLER_API_KEY || ''
     }
   },

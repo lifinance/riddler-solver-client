@@ -326,7 +326,7 @@ async function approvePermit2(chainKey, token = 'usdt', amount = null) {
   console.log(`\n📤 Transaction submitted: ${getExplorerTransactionUrl(chainKey, tx.hash)}`);
   console.log(`   Waiting for confirmation...`);
 
-  const receipt = await tx.wait();
+  const receipt = await tx.wait(1);
   console.log(`\n✅ Permit2 approved!`);
   console.log(`   Block: ${receipt.blockNumber}`);
   console.log(`   Gas used: ${receipt.gasUsed.toString()}`);
@@ -552,7 +552,7 @@ async function depositFlow(params) {
   console.log(`\n📤 Transaction submitted: ${getExplorerTransactionUrl(inputChain, tx.hash)}`);
   console.log(`   Waiting for confirmation...`);
 
-  const receipt = await tx.wait();
+  const receipt = await tx.wait(1);
   console.log(`\n✅ Deposit confirmed!`);
   console.log(`   Block: ${receipt.blockNumber}`);
   console.log(`   Gas used: ${receipt.gasUsed.toString()}`);
@@ -794,8 +794,8 @@ Examples:
   # Use local server (default)
   node src/index.js full --method deposit_address --server local --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc
   
-  # Use AWS dev server (testnet)
-  node src/index.js full --method deposit_address --server aws --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc
+  # Use dev server (testnet)
+  node src/index.js full --method deposit_address --server dev --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc
   
   # Use production server (mainnet)
   node src/index.js full --method deposit_address --server prod --input-chain ethereum --output-chain base
@@ -805,7 +805,7 @@ Examples:
   # ─────────────────────────────────────────────────────────────
   
   # Testnet: Eth Sepolia → Base Sepolia (USDC)
-  node src/index.js full --method deposit_address --server aws --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc --amount 1000000
+  node src/index.js full --method deposit_address --server dev --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc --amount 1000000
   
   # Mainnet: Ethereum → Base (USDT)
   node src/index.js full --method deposit_address --server prod --input-chain ethereum --output-chain base --amount 1000000

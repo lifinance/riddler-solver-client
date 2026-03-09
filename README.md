@@ -35,7 +35,7 @@ All commands are **single-command flows** that auto-execute everything.
 
 ```bash
 # Testnet: Eth Sepolia → Base Sepolia (USDC)
-node src/index.js full --method deposit_address --server aws --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc --amount 1000000
+node src/index.js full --method deposit_address --server dev --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc --amount 1000000
 
 # Mainnet: Ethereum → Base (USDT)
 node src/index.js full --method deposit_address --server prod --input-chain ethereum --output-chain base --amount 1000000
@@ -53,7 +53,7 @@ node src/index.js full --method deposit_address --server prod --input-chain ethe
 node src/index.js full --server dev --method erc3009 --input-chain eth-sepolia --output-chain base-sepolia --input-token usdc --output-token usdc --amount 1000000
 
 # Mainnet
-node src/index.js full --server prod --method erc3009 --input-chain ethereum --output-chain base --amount 1000000
+node src/index.js full --server prod --method erc3009 --input-chain ethereum --output-chain base --input-token usdc --output-token usdc --amount 1000000
 ```
 
 **What happens:** Checks balance → Gets quote → Signs → Submits → Polls
